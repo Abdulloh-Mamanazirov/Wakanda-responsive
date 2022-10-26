@@ -98,7 +98,9 @@ header#main-header {
   z-index: 9999;
   box-shadow: 0 0 15px var(--grey-color);
 }
-
+.dropdown {
+  display: none;
+}
 header#main-header .logo {
   font-size: 1.5rem;
   font-weight: 700;
@@ -624,35 +626,78 @@ footer#the-end form button {
     padding: 0 10px;
   }
   .main-btn {
-    padding: 5px 10px;
-    font-size: 13px;
+    padding: 8px 14px;
+    font-size: 15px;
   }
   .flex {
     flex-wrap: wrap;
   }
 
+  nav {
+    display: none;
+  }
+  .dropdown i{
+    color: #0077c0;
+    font-size: 25px;
+  }
+  .dropdown {
+    position: absolute;
+    right: 40px;
+    display: initial;
+  }
+  .dropdown-menu {
+    text-align: center;
+    background-color: rgb(247, 245, 245);
+    border-radius: 10px;
+    position: absolute;
+    right: 0px;
+    width: 250px;
+    margin: 5px 0;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.3s;
+  }
+  .dropdown-menu li{
+    font-size: 17px;
+    font-weight: 500;
+    padding: 13px 0;
+  }
+  .dropdown-menu li:hover{
+    background-color: #eee;
+  }
+
+  #drop1 {
+    display: none;
+  }
+
+  #drop1:checked + .dropdown-menu {
+    opacity: 1;
+    visibility: visible;
+  }
+header#main-header .logo{
+  padding-left: 20px;
+}
   header#main-header {
     width: 100vw;
   }
 
   /* Showcase */
   section#showcase .portion {
-    flex: auto;
+    all: unset;
   }
 
   .showcase-text {
     text-align: center;
+    margin-bottom: 20px;
   }
+
   section#showcase h1 {
-    width: 300px;
-    margin: 0 auto;
-    font-size: 1.4rem;
+    font-size: 2rem;
   }
   section#showcase p {
-    width: 300px;
+    width: unset;
     line-height: 1.4;
-    margin: 2rem auto;
-    font-size: 0.8rem;
+    font-size: 1rem;
     font-weight: 400;
   }
   /* Showcase End */
@@ -675,6 +720,7 @@ footer#the-end form button {
     letter-spacing: 3px;
   }
   section#feature h2 {
+    width: 360px;
     font-size: 2.5rem;
     font-weight: 700;
     padding-top: 10px;
@@ -695,8 +741,11 @@ footer#the-end form button {
     flex-wrap: wrap;
     gap: 5rem;
   }
+  section#steps .portion {
+    all: unset;
+  }
   section#steps h2 {
-    font-size: 1.5rem;
+    font-size: 1.7rem;
     font-weight: 700;
   }
   section#steps ol {
@@ -704,14 +753,14 @@ footer#the-end form button {
     list-style: none;
   }
   section#steps li {
-    font-size: 0.8rem;
+    font-size: 1rem;
     font-weight: 400;
     margin: 1rem 0;
   }
   section#steps .counter {
-    font-size: 12px;
-    width: 25px;
-    height: 25px;
+    font-size: 15px;
+    width: 30px;
+    height: 30px;
     justify-content: center;
     margin-right: 1rem;
     font-weight: 600;
@@ -724,14 +773,16 @@ footer#the-end form button {
     flex-wrap: wrap;
     gap: 5rem;
   }
-
+  section#explore .portion {
+    all: unset;
+  }
   section#explore h2 {
-    font-size: 1.5rem;
+    font-size: 1.7rem;
     font-weight: 700;
   }
 
   section#explore p {
-    font-size: 0.8rem;
+    font-size: 1rem;
     font-weight: 400;
     margin: 1rem 0;
     line-height: 1.6;
@@ -744,8 +795,11 @@ footer#the-end form button {
     font-weight: 600;
     letter-spacing: 3px;
   }
-
+  section#testimonials .portion {
+    all: unset;
+  }
   section#testimonials h2 {
+    width: 300px;
     font-size: 1.7rem;
     font-weight: 700;
     margin: 1rem auto 3rem;
@@ -764,7 +818,10 @@ footer#the-end form button {
   /*Testimonials End  */
 
   /* Find */
-
+  section#find .portion {
+    all: unset;
+    padding-left: 20px;
+  }
   section#find h3 {
     font-size: 0.9rem;
     font-weight: 600;
@@ -780,7 +837,24 @@ footer#the-end form button {
   /* Find End */
 
   /* footer */
+  footer#the-end {
+    flex-wrap: wrap;
+  }
+  footer#the-end .athird {
+    margin-bottom: 20px;
+    width: 100%;
+  }
 
+  footer#the-end .portion,
+  .aquater {
+    all: unset;
+    width: 100%;
+  }
+  footer#the-end ul {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
   footer#the-end .logo {
     font-size: 1rem;
     font-weight: 700;
